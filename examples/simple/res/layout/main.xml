@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout
+ 		xmlns:android="http://schemas.android.com/apk/res/android"
+ 		xmlns:mad="http://schemas.android.com/apk/res/de.madvertise.test"
+		android:orientation="vertical"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		>
+		<de.madvertise.android.sdk.MadView
+			android:id="@+id/madad"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			mad:isTestMode="true"
+			mad:backgroundColor="#000000"
+			mad:textColor="#FF1F1F"
+			mad:bannerType="mma"
+			mad:deliverOnlyText="false"
+		/>
+		<ListView
+			android:id="@+id/country_list"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:background="#000000"
+		/>
+ </LinearLayout>

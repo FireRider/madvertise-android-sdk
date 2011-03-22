@@ -1,0 +1,53 @@
+The madvertise Android SDK lets you monetize your Android apps via advertising. Basically, the code sends http requests to the madvertise ad server and displays banner ads in various formats. You will receive 100 % of click generated revenues, as we commited in our [developer fund](http://www.madvertise-fund.com/).
+
+It supports different banner sizes (MMA, IAB), ad rotation, etc. ...
+
+Preparations
+------------
+
+* Install IDE (Eclipse recommended)
+
+* Install Git
+
+* Clone this repository:
+    
+    git clone git@github.com:madvertise/madvertise-android-sdk.git
+
+* Sign up at [madvertise](https://app.madvertise.de/register)
+  * If you don't have already an account, please sign up.
+  * Create an app and copy the token, it will identify the requests send to our ad-server.
+  * The Sample SDK comes with its own token. You can use it during development and for testing.
+
+* All code was tested with the latest Eclipse 20100218-1602 and ADT 10.0.1.v201103111512-110841
+
+* The required Android SDK version is 7 (2.1).
+
+Sample App
+----------
+
+The SDK comes with a very simple example, how to integrate the SDK in your APP. You can find it at [PROJECT_ROOT]/example/simple/. 
+Please make sure to add the madvertiseSDK to the build path settings accordingly to your development environment.
+
+For Eclipse with installed ADT Plugin follow [these steps](http://developer.android.com/guide/developing/projects/projects-eclipse.html#ReferencingLibraryProject).
+
+Using the SDK
+-------------
+
+* Import the SDK project located at [PROJECT_ROOT]/madvertiseSDK/ to your workspace
+
+* Add the SDK to your project build path as described [here](http://developer.android.com/guide/developing/projects/projects-eclipse.html#ReferencingLibraryProject) 
+
+* Embed the MadView as shown in the sample app
+
+* Make sure to add the madvertise_site_token to your AndroidManifest.xml, that you get when creating an app on our [plattform](https://app.madvertise.de/register).
+
+The [original documentation](http://redmine.madvertise.me/projects/madapi/wiki/Android_SDK) contains some further information on how to use the SDK.
+
+About
+-----
+
+madvertise is a mobile ad network, that enables developers to monetize their apps via advertising. Banners of various sizes can be placed on mobile websites or directly in applications. The latter is usually done with a SDK in form of a compiled library, that sends requests to an ad-server and display the mobile ad. So far, so good.
+
+But apps are different, developers are, and so are the requirements and wishes, that developers have in order to include advertising in their apps. Additionally, it feels kind of strange, to use foreign librarys in your own code, without being able to actually have a look at the sources.
+
+This is why madvertise decided to make all SDKs public as open source projects. We simply could not handle all the (we admit, pretty good) feature requests and suggestions that developers make. Well, we believe nobody can and that's why we want to share the code with the whole community and enhanced it together. You can adapt the library much more quicker to whatever fits best for you.

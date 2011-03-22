@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<declare-styleable name = "de.madvertise.android.sdk.MadView">
+		<attr name="secondsToRefresh" format="integer" />
+		<attr name="backgroundColor" format="color" />
+		<attr name="textSize" format="integer" />
+		<attr name="textColor" format="color" />
+		<attr name="isTestMode" format="boolean" />
+		<attr name="bannerType" format="string" />
+		<attr name="deliverOnlyText" format="boolean" />
+	</declare-styleable>
+</resources>
