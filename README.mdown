@@ -1,3 +1,9 @@
+madvertise Android SDK
+===========================
+
+Intro
+-----
+
 The madvertise Android SDK lets you monetize your Android apps via advertising. Basically, the code sends http requests to the madvertise ad server and displays banner ads in various formats. You will receive 100 % of click generated revenues, as we commited in our [developer fund](http://www.madvertise-fund.com/).
 
 It supports different banner sizes (MMA, IAB), ad rotation, etc. ...
