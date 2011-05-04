@@ -239,7 +239,7 @@ public class MadView extends LinearLayout {
 			if (packageName != null) {
 			    MadUtil.logMessage(null, Log.DEBUG, "namespace = " + packageName);
 			}
-			testMode = attrs.getAttributeBooleanValue(packageName, "testMode", IS_TESTMODE_DEFAULT);
+			testMode = attrs.getAttributeBooleanValue(packageName, "isTestMode", IS_TESTMODE_DEFAULT);
 			textColor = attrs.getAttributeIntValue(packageName, "textColor", MadUtil.TEXT_COLOR_DEFAULT);
 			backgroundColor = attrs.getAttributeIntValue(packageName, "backgroundColor", MadUtil.BACKGROUND_COLOR_DEFAULT);
 			secondsToRefreshAd = attrs.getAttributeIntValue(packageName, "secondsToRefresh", MadUtil.SECONDS_TO_REFRESH_AD_DEFAULT);
@@ -359,7 +359,9 @@ public class MadView extends LinearLayout {
 						MadUtil.logMessage(null, Log.DEBUG, "Sending request");
 						httpResponse = httpClient.execute(postRequest);
 
-						MadUtil.logMessage(null, Log.DEBUG, "Response Code=> " + httpResponse.getStatusLine().getStatusCode());
+						MadUtil.logMessage(null, Log.DEBUG, "Response Code => " + httpResponse.getStatusLine().getStatusCode());
+						if (testMode)
+							MadUtil.logMessage(null, Log.DEBUG, "Madvertise Debug Response: " + httpResponse.getLastHeader("X-Madvertise-Debug"));
 						int responseCode = httpResponse.getStatusLine().getStatusCode();
 
 						HttpEntity entity = httpResponse.getEntity();
